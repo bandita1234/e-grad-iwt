@@ -10,45 +10,95 @@ const SignUp = () => {
     u_gender: "",
     c_address: "",
     u_branch: "",
-    u_skill: "",
+    c_prog: false,
+    java_prog: false,
+    python_prog: false,
+    JSP_prog: false,
   });
 
-  const [error, setError] = useState({
-    u_name: "",
-    u_email: "",
-    u_password: "",
-    c_password: "",
-    u_age: "",
-    u_gender: "",
-    c_address: "",
-    u_branch: "",
-    u_skill: "",
-  });
+  // const [error, setError] = useState({
+  //   u_name: "",
+  //   u_email: "",
+  //   u_password: "",
+  //   c_password: "",
+  //   u_age: "",
+  //   u_gender: "",
+  //   c_address: "",
+  //   u_branch: "",
+  //   u_skill: "",
+  // });
+  const [nameErr, setNameErr] = useState("")
+  const [ageErr, setAgeErr] = useState("")
 
-  const handleChange = (e) => {
-    if (e.target.name == "u_name" && e.target.value.length > 25) {
-      setError({
-        ...error,
-        u_name: e.target.value,
-      });
+  const validateForm = (e) => {
+    // if (
+    //   e.target.name === "c_prog" ||
+    //   e.target.name === "java_prog" ||
+    //   e.target.name === "python_prog" ||
+    //   e.target.name === "JSP_prog"
+    // ) {
+    //   var len = 0;
+    //   if (
+    //     (e.target.name === "c_prog" && e.target.value) ||
+    //     (e.target.name === "c_prog" && e.target.value) ||
+    //     (e.target.name === "c_prog" && e.target.value) ||
+    //     (e.target.name === "c_prog" && e.target.value)
+    //   ) {
+    //     len += 1;
+    //   }
+    //   if(len<2){
+    //     setError({
+    //       ...error,
+    //       u_skill: "student must have atleast 2 skills",
+    //     });
+    //   }else{
+    //     setError({
+    //       ...error,
+    //       u_skill: "",
+    //     });
+    //   }
+    // }
+// console.log(typeof(e.target.value));
+    if (e.target.name === "u_name" && e.target.value.length > 25) {
+      // const err={...error,u_name: "Name must contain less than 25 characters"}
+      // console.log(err);
+      // const str = "Name must contain less than 25 characters"
+      setNameErr("Name must contain less than 25 characters");
     } else {
-      setError({
-        ...error,
-        u_name: "",
-      });
+      setNameErr("");
     }
+
+    if (
+      e.target.name === "u_age" &&
+      (parseInt(e.target.value) < 18 ||
+      parseInt(e.target.value) > 23)
+    ) {
+      setAgeErr("Age of students must be between 18-23")
+    } else {
+      setAgeErr("");
+    }
+  };
+
+  
+  const handleChange = (e) => {
+    validateForm(e);
+
     setForm({
       ...form,
       [e.target.name]: e.target.value,
     });
   };
-
-  console.log(form);
+const formSubmit = (e)=>{
+  e.preventDefault();
+  console.log(nameErr,ageErr);
+}
   return (
     <div className="w-screen min-h-screen text-center flex justify-center items-center bg-emerald-200">
       <div className="bg-gray-100 w-4/5 sm:w-3/5 lg:w-2/5 p-6 my-12 rounded-[16px]">
         <h1 className="text-2xl font-bold py-8">SIGNUP</h1>
-        <form className="text-left" action="/" method="get">
+        <p className="text-red-500">{nameErr && nameErr}</p>
+        <p className="text-red-500">{ageErr && ageErr}</p>
+        <form className="text-left" onSubmit={e=>formSubmit(e)}>
           <div className="">
             <input
               className="w-full text-md p-2 my-6 border border-solid border-emerald-500"
@@ -96,7 +146,7 @@ const SignUp = () => {
           <div className="">
             <input
               className="w-full text-md p-2 my-6 border border-solid border-emerald-500"
-              type="text"
+              type="number"
               name="u_age"
               autoComplete="false"
               placeholder="Enter your age"
@@ -114,7 +164,7 @@ const SignUp = () => {
                 name="u_gender"
                 onChange={(e) => handleChange(e)}
                 value="male"
-                checked={form.u_gender == "male" ? "true" : "false"}
+                checked={form.u_gender === "male" ? true : false}
               />
               <label for="male" className="mr-4">
                 Male
@@ -126,7 +176,7 @@ const SignUp = () => {
                 name="u_gender"
                 onChange={(e) => handleChange(e)}
                 value="female"
-                checked={form.u_gender == "female" ? "true" : "false"}
+                checked={form.u_gender === "female" ? true : false}
               />
               <label for="female" className="mr-4">
                 Female
@@ -138,7 +188,7 @@ const SignUp = () => {
                 name="u_gender"
                 onChange={(e) => handleChange(e)}
                 value="others"
-                checked={form.u_gender == "others" ? "true" : "false"}
+                checked={form.u_gender === "others" ? true : false}
               />
               <label for="others" className="mr-4">
                 Others
@@ -186,6 +236,11 @@ const SignUp = () => {
                 type="checkbox"
                 id="c_prog"
                 name="c_prog"
+                checked={form.c_prog}
+                onChange={(e) => {
+                  setForm({ ...form, c_prog: !form.c_prog });
+                  validateForm(e);
+                }}
               />
               <label for="c_prog" className="mr-4">
                 C
@@ -195,6 +250,11 @@ const SignUp = () => {
                 type="checkbox"
                 id="java_prog"
                 name="java_prog"
+                checked={form.java_prog}
+                onChange={(e) => {
+                  setForm({ ...form, java_prog: !form.java_prog });
+                  validateForm(e);
+                }}
               />
               <label for="java_prog" className="mr-4">
                 JAVA
@@ -204,6 +264,11 @@ const SignUp = () => {
                 type="checkbox"
                 id="python_prog"
                 name="python_prog"
+                checked={form.python_prog}
+                onChange={(e) => {
+                  setForm({ ...form, python_prog: !form.python_prog });
+                  validateForm(e);
+                }}
               />
               <label for="python_prog" className="mr-4">
                 Python
@@ -213,6 +278,11 @@ const SignUp = () => {
                 type="checkbox"
                 id="JSP_prog"
                 name="JSP_prog"
+                checked={form.JSP_prog}
+                onChange={(e) => {
+                  setForm({ ...form, JSP_prog: !form.JSP_prog });
+                  validateForm(e);
+                }}
               />
               <label for="JSP_prog" className="mr-4">
                 JSP
