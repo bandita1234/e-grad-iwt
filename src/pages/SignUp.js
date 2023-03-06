@@ -29,6 +29,7 @@ const SignUp = () => {
   // });
   const [nameErr, setNameErr] = useState("")
   const [ageErr, setAgeErr] = useState("")
+  const [emailErr, setEmailErr] = useState("")
 
   const validateForm = (e) => {
     // if (
@@ -77,6 +78,8 @@ const SignUp = () => {
     } else {
       setAgeErr("");
     }
+
+    
   };
 
   
