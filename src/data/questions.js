@@ -45,7 +45,7 @@ export const quiz = [
     ],
   },
   {
-    topic: "maths",
+    topic: "math",
     totalQuestions: 5,
     questions: [
       {
