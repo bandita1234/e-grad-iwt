@@ -1,11 +1,12 @@
 import React from "react";
+import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 
 const Home = () => {
   return (
     <div>
       <Nav />
-      <div className="flex gap-5">
+      <div className="flex gap-5 bg-slate-900 text-white">
         <div className="flex-1">
           <img
             src="https://www.thesaurus.com/e/wp-content/uploads/2022/05/20220512_graduation_1000x562.jpg"
@@ -31,6 +32,7 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

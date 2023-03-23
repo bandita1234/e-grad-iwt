@@ -89,4 +89,47 @@ export const quiz = [
       },
     ],
   },
+
+  {
+    topic: "physics",
+    totalQuestions: 5,
+    questions: [
+      {
+        question:
+          "What is the unit of electric current?",
+        choices: ["Coulomb","Watt","Ampere","Volt"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question:
+          "What is the unit of force?",
+        choices: ["Joule","Newton","Kilogram","Meter"],
+        type: "MCQs",
+        correctAnswer: 1,
+      },
+      {
+        question:
+          "Which law of thermodynamics states that the entropy of an isolated system always increases over time?",
+        choices: [
+          "Zeroth law","First law","Second law","Third law"
+        ],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question: "What is the formula for kinetic energy?",
+        choices: [ "E = mc^2"," E = hf","E = 1/2mv^2","E = Fd"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question:
+          "What is the speed of light in a vacuum?",
+        choices: ["299,792,458 m/s","30,000 m/s","3,000,000 m/s","300,000,000 m/s"],
+        type: "MCQs",
+        correctAnswer: 3,
+      },
+    ],
+  },
 ];
