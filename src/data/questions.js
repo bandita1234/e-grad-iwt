@@ -91,7 +91,7 @@ export const quiz = [
   },
 
   {
-    topic: "physics",
+    topic: "phy",
     totalQuestions: 5,
     questions: [
       {
@@ -129,6 +129,89 @@ export const quiz = [
         choices: ["299,792,458 m/s","30,000 m/s","3,000,000 m/s","300,000,000 m/s"],
         type: "MCQs",
         correctAnswer: 3,
+      },
+    ],
+  },
+
+  
+  {
+    topic: "bio",
+    totalQuestions: 5,
+    questions: [
+      {
+        question:
+          "Which of the following is a primary function of the liver in the human body?",
+        choices: ["Producing insulin","Storing glucose","Breaking down toxins","Regulating body temperature"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question:
+          "Which type of muscle is under voluntary control?",
+        choices: ["Smooth muscle"," Cardiac muscle","Skeletal muscle","Both A and B"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question:
+          "Which of the following is NOT a function of the respiratory system in humans?",
+        choices: ["Oxygenating the blood"," Removing carbon dioxide from the body","Regulating body temperature","Facilitating speech"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question: "Which of the following is a characteristic of a prokaryotic cell?",
+        choices: [ "Has a nucleus","Contains membrane-bound organelles"," Is usually larger than eukaryotic cells","Lacks a true membrane-bound nucleus"],
+        type: "MCQs",
+        correctAnswer: 3,
+      },
+      {
+        question:
+          "Which of the following is NOT a type of RNA?",
+        choices: ["Messenger RNA (mRNA)","Transfer RNA (tRNA)","Ribosomal RNA (rRNA)","Deoxyribonucleic acid (DNA)"],
+        type: "MCQs",
+        correctAnswer: 3,
+      },
+    ],
+  },
+
+  {
+    topic: "chem",
+    totalQuestions: 5,
+    questions: [
+      {
+        question:
+          "What is the molecular formula for water?",
+        choices: ["H2SO4","CO2","H2O","CH4"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question:
+          "What is the chemical symbol for gold?",
+        choices: ["Au","Ag","Fe","Cu"],
+        type: "MCQs",
+        correctAnswer: 0,
+      },
+      {
+        question:
+          "What is the pH of a neutral solution?",
+        choices: ["0","7","14","-1"],
+        type: "MCQs",
+        correctAnswer: 1,
+      },
+      {
+        question: "Which of the following is a noble gas?",
+        choices: [ "Oxygen","Nitrogen","Helium","Carbon"],
+        type: "MCQs",
+        correctAnswer: 2,
+      },
+      {
+        question:
+          "What is the chemical formula for table salt?",
+        choices: ["NaCl","KCl","CaCl2","MgCl2"],
+        type: "MCQs",
+        correctAnswer: 0,
       },
     ],
   },
