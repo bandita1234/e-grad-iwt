@@ -13,35 +13,21 @@ import "../css/footer.css"
 const Gallery = () => {
   const galData = [
     {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img1.jpg",
+      imgSrc: "https://thumbs.dreamstime.com/b/flat-lay-composition-mouse-keyboard-phrase-online-exam-white-wooden-table-178226763.jpg",
     },
     {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img2.jpg",
+      imgSrc: "https://www.shutterstock.com/image-photo/elearning-education-people-concept-happy-260nw-1780467695.jpg",
     },
     {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img3.jpg",
+      imgSrc: "https://blog.commlabindia.com/wp-content/uploads/2018/10/randomizing-questions-in-eLearning-assessments.jpg",
     },
     {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img4.jpg",
+      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXdJ_zD_aZwcSUjFluu4wxtAlsqHdqVUlhSNIL1PerHw&usqp=CAU&ec=48665701",
     },
     {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img5.JPG",
+      imgSrc: "https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/04/11212007/Science-Quiz.png",
     },
-    {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img6.JPG",
-    },
-    {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img7.JPG",
-    },
-    // {
-    //   imgSrc: "https://ik.imagekit.io/lvjdjaus38/img8.jpg",
-    // },
-    {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img9.jpg",
-    },
-    {
-      imgSrc: "https://ik.imagekit.io/lvjdjaus38/img10.JPG",
-    },
+    
   ];
   return (
     <>
