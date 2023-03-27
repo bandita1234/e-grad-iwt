@@ -50,42 +50,42 @@ export const quiz = [
     questions: [
       {
         question:
-          "2+3=",
-        choices: ["34", "23", "5", "None of the above"],
-        type: "MCQs",
-        correctAnswer: 2,
-      },
-      {
-        question:
-          "Which of the following keywords is used to define a variable in Javascript?",
-        choices: ["var", "let", "var and let", "None of the above"],
-        type: "MCQs",
-        correctAnswer: 2,
-      },
-      {
-        question:
-          "Which of the following methods can be used to display data in some form using Javascript?",
-        choices: [
-          "document.write()",
-          "console.log()",
-          "window.alert",
-          "All of the above",
-        ],
-        type: "MCQs",
-        correctAnswer: 3,
-      },
-      {
-        question: "How can a datatype be declared to be a constant type?",
-        choices: ["const", "var", "let", "constant"],
+          "What is the value of x in the equation 3x + 5 = 14?",
+        choices: ["x=3", "x=4", "x=9", "x=15"],
         type: "MCQs",
         correctAnswer: 0,
       },
       {
         question:
-          "Which of the following keywords is used to define a variable in Javascript?",
-        choices: ["var", "let", "var and let", "None of the above"],
+          "What is the perimeter of a rectangle with length 7 cm and width 5 cm?",
+        choices: ["12 cm2", "28 cm2", "24 cm2", "30 cm2"],
         type: "MCQs",
         correctAnswer: 2,
+      },
+      {
+        question:
+          "What is the slope of the line passing through the points (2, 5) and (4, 9)",
+        choices: [
+          "1",
+          "2",
+          "3",
+          "4",
+        ],
+        type: "MCQs",
+        correctAnswer: 1,
+      },
+      {
+        question: "What is the solution to the quadratic equation x^2 + 4x + 4 = 0",
+        choices: ["2", "-2", "4", "-4"],
+        type: "MCQs",
+        correctAnswer: 1,
+      },
+      {
+        question:
+          "What is the value of sin(45°)",
+        choices: ["0", "1/2", "3/2", "None of the above"],
+        type: "MCQs",
+        correctAnswer: 3,
       },
     ],
   },
