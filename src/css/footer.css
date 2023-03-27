@@ -1,0 +1,184 @@
+/*************************************** Gallery ***************************************/
+.media {
+    padding: 0 0 2rem;
+  }
+  .media h1,
+  .timeline_main h1 {
+    color: #013f72;
+  }
+  .myGallerySwiper {
+    position: relative;
+    padding-bottom: 40px !important;
+  }
+  .myGallerySwiper .g-slide {
+    width: 28rem;
+  }
+  .myGallerySwiper .g-slide.swiper-slide-active {
+    background-color: var(--ldark);
+    padding: 6px;
+    border: 4px solid var(--pink) !important;
+    border-radius: 32px;
+    -webkit-filter: none !important;
+  }
+  .g-slide.swiper-slide-visible {
+    -webkit-filter: blur(2px) !important;
+  }
+  .myGallerySwiper .g-slide {
+    -webkit-filter: blur(5px);
+  }
+  .myGallerySwiper .g-slide img {
+    border-radius: 21px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--pink);
+  }
+  @media screen and (max-width: 1024px) {
+    .myGallerySwiper .g-slide {
+      width: 24rem;
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .myGallerySwiper .g-slide {
+      width: 20rem;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .myGallerySwiper .g-slide {
+      width: 18rem;
+    }
+    .myGallerySwiper .g-slide.swiper-slide-active {
+      padding: 4px;
+      border: 4px solid var(--pink) !important;
+      border-radius: 28px;
+      -webkit-filter: none !important;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .myGallerySwiper .g-slide {
+      width: 16rem;
+    }
+  }
+  
+  /***************************************** CountDown *****************************************/
+  .count_div {
+    display: inline-block;
+    padding: 0.3rem 2rem;
+    background-color: var(--ldark);
+    border-radius: 10px;
+    position: relative;
+    z-index: 5;
+    bottom: 70px;
+    box-shadow: 0px 2px 10px #191919;
+  }
+  .count_down {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--pink);
+    display: flex;
+    justify-content: center;
+    cursor: context-menu;
+  }
+  .cd_block {
+    width: 100px;
+    margin: 0 0 0.6rem;
+  }
+  .cd_block p {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  @media screen and (max-width: 620px) {
+    .count_down {
+      font-size: 3rem;
+    }
+    .cd_block {
+      width: 80px;
+    }
+    .cd_block p {
+      font-size: 14px;
+    }
+    .count_div {
+      padding: 0.3rem 1rem;
+      bottom: 50px;
+    }
+  }
+  
+  @media screen and (max-width: 460px) {
+    .count_down {
+      font-size: 2rem;
+    }
+    .cd_block {
+      width: 60px;
+    }
+    .cd_block p {
+      font-size: 10px;
+    }
+    .count_div {
+      padding: 0.3rem 1rem;
+      bottom: 40px;
+    }
+  }
+  
+  /************************************** TimeLine **************************************/
+  .time_line {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vertical-timeline-element-icon {
+    box-shadow: 0 0 0 5px var(--pink), inset 0 2px 0 rgb(0 0 0/8%),
+      0 3px 0 4px rgb(0 0 0/5%) !important;
+  }
+  .time_line .vertical-timeline-element-content {
+    background-color: var(--ldark) !important;
+    color: #fff;
+    box-shadow: 0 3px 0 var(--pink) !important;
+  }
+  .vertical-timeline-element-content-arrow {
+    border: 7px solid transparent;
+    border-right: 7px solid var(--pink) !important;
+  }
+  
+  .timeline_logo img {
+    border-radius: 100%;
+    width: 60px;
+  }
+  
+  @media screen and (min-width: 1170px) {
+    .vertical-timeline-element-date {
+      justify-content: left;
+      align-items: left;
+      display: flex;
+    }
+    .vertical-timeline--two-columns
+      .vertical-timeline-element-content
+      .vertical-timeline-element-date {
+      position: absolute;
+      width: 100%;
+      left: 124%;
+      top: 6px;
+      font-size: 16px;
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 1170px) {
+    .timeline_logo img {
+      width: 40px;
+    }
+    .vertical-timeline-element-content .vertical-timeline-element-date {
+      text-align: center !important;
+      float: none !important;
+  
+      /* margin: auto; */
+    }
+    /* .vertical-timeline-element-date span{
+      text-align: center!important;
+      float: none !important;
+    } */
+  }
