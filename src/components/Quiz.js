@@ -12,7 +12,6 @@ const Quiz = () => {
     const tmp = quiz.filter((q) => q.topic===exam.subject);
     setQues([...tmp]);
   }, []);
-  console.log(ques);
 
   const handlePrev = () => {
     if (idx > 0) setIdx(idx - 1);
@@ -24,11 +23,13 @@ const Quiz = () => {
   };
   const submitExam = () => {
     exam.incStage();
+    // calcRes();
+    
   }
   const handleChange = (e) => {
-    console.log("sdvlsv");
     setVal(e.target.value);
-    console.log(e.target.value);
+    exam.updateRes(idx,e.target.value)
+    console.log(exam.res);
   }
   return (
     <div className="bg-emerald-100 h-screen lg:py-10 lg:px-20 flex justify-center items-center">
@@ -45,7 +46,7 @@ const Quiz = () => {
             id="0"
             value={ques && ques[0].questions[idx].choices[0]}
             onChange={(e)=>handleChange(e)}
-            checked={ques && val ===ques[0].questions[idx].choices[0] ? true: false}
+            checked={ques && exam.res[idx] ===ques[0].questions[idx].choices[0] ? true: false}
           />
           <label htmlFor="0">{ques && ques[0].questions[idx].choices[0]}</label>
         </div>
@@ -56,7 +57,7 @@ const Quiz = () => {
             id="1"
             value={ques && ques[0].questions[idx].choices[1]}
             onChange={(e)=>handleChange(e)}
-            checked={ques && val ===ques[0].questions[idx].choices[1] ? true: false}
+            checked={ques && exam.res[idx] ===ques[0].questions[idx].choices[1] ? true: false}
           />
           <label htmlFor="1">{ques && ques[0].questions[idx].choices[1]}</label>
         </div>
@@ -67,7 +68,7 @@ const Quiz = () => {
             id="2"
             value={ques && ques[0].questions[idx].choices[2]}
             onChange={(e)=>handleChange(e)}
-            checked={ques && val ===ques[0].questions[idx].choices[2] ? true: false}
+            checked={ques && exam.res[idx] ===ques[0].questions[idx].choices[2] ? true: false}
           />
           <label htmlFor="2">{ques && ques[0].questions[idx].choices[2]}</label>
         </div>
@@ -78,7 +79,7 @@ const Quiz = () => {
             id="3"
             value={ques && ques[0].questions[idx].choices[3]}
             onChange={(e)=>handleChange(e)}
-            checked={ques && val ===ques[0].questions[idx].choices[3] ? true: false}
+            checked={ques && exam.res[idx] ===ques[0].questions[idx].choices[3] ? true: false}
           />
           <label htmlFor="3">{ques && ques[0].questions[idx].choices[3]}</label>
         </div>
