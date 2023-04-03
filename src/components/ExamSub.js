@@ -7,7 +7,7 @@ const ExamSub = () => {
 
   return (
     <div className="h-screen lg:p-20">
-      <div className="bg-emerald-100 h-full lg:py-10 lg:px-20 relative">
+      <div className="bg-emerald-100 h-full lg:py-10 lg:px-20 relative shadow-2xl">
         <h1>Choose Your Subject</h1>
 
         <select

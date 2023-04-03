@@ -33,7 +33,7 @@ const Quiz = () => {
   }
   return (
     <div className="bg-emerald-100 h-screen lg:py-10 lg:px-20 flex justify-center items-center">
-    <div className="bg-emerald-200 w-full sm:w-1/2 p-8 space-y-4 rounded-md">
+    <div className="bg-emerald-200 w-full sm:w-1/2 p-8 space-y-4 rounded-md shadow-2xl">
     <div><Timer/></div>
       <div className="">
         <p className="text-2xl font-bold"><span>{idx+1}.  </span>{ques && ques[0].questions[idx].question}</p>

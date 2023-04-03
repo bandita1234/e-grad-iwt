@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ExamResult from "./ExamResult";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(59);
@@ -22,7 +23,10 @@ const Timer = () => {
       clearInterval(timer);
     };
   });
-
+  if(minutes+seconds===0){
+    return <ExamResult/>
+  }
+  else{
   return (
     <div className="text-xl font-semibold text-red-500 flex flex-col items-end">
       <h1>Remaining Time :</h1>
@@ -31,6 +35,7 @@ const Timer = () => {
       </p>
     </div>
   );
+  }
 };
 
 export default Timer;

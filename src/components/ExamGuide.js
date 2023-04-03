@@ -5,7 +5,7 @@ const ExamGuide = () => {
     const exam = useContext(ExamContext)
   return (
     <div className="h-screen lg:p-20">
-      <div className="bg-emerald-100 h-full lg:py-10 lg:px-20 relative">
+      <div className="bg-emerald-100 h-full lg:py-10 lg:px-20 relative shadow-2xl">
         <h1 className="text-2xl lg:text-4xl font-bold text-center mb-10">
           Welcome to E-Exam
         </h1>
