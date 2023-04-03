@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import ExamResult from "./ExamResult";
+import { ExamContext } from "../state/ExamState";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(59);
-  const [minutes, setMinutes] = useState(1);
+  const [minutes, setMinutes] = useState(0);
+
+  const exam = useContext(ExamContext);
 
   var timer;
   useEffect(() => {
@@ -13,20 +16,17 @@ const Timer = () => {
       } else {
         setSeconds(0);
       }
-
-      if (seconds < 59) {
-        setMinutes(0);
-      }
     }, 1000);
 
     return () => {
       clearInterval(timer);
     };
   });
-  if(minutes+seconds===0){
-    return <ExamResult/>
+
+  if(minutes + seconds === 0){
+    exam.incStage();
   }
-  else{
+
   return (
     <div className="text-xl font-semibold text-red-500 flex flex-col items-end">
       <h1>Remaining Time :</h1>
@@ -35,7 +35,6 @@ const Timer = () => {
       </p>
     </div>
   );
-  }
 };
 
 export default Timer;
